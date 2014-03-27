@@ -1,0 +1,465 @@
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+/* global */
+h2 {
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.content h1:first-child,
+.content h2:first-child {
+  margin-top: 0;
+}
+.content h1:last-child,
+.content h2:last-child {
+  margin-bottom: 0;
+}
+
+label {
+  font-weight: normal;
+}
+
+.small {
+  color: #999;
+}
+
+li.separate {
+  padding-top: 10px;
+}
+/* fold line */
+.fold-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding-right: 20px;
+  border-bottom: 2px dashed #e33;
+  height: 28px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: right;
+  color: #e33;
+
+  &.fold-at-768 {
+    top: 740px;
+    &:after {
+      content: "Fold @768px"
+    }
+  }
+}
+
+/* content styles */
+.content {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.content-no-margin {
+  margin: 0;
+}
+.content-with-padding {
+  padding: 15px 15px;
+}
+
+/* show width styles */
+.show-width p.width .glyphicon {
+  font-size: 16px;
+  padding-right: 10px;
+}
+.show-width p.width .glyphicon:before {
+  position: relative;
+  top: 2px;
+}
+
+/* image styles */
+.content-with-padding img.full-width {
+  margin: 0 -15px;
+}
+.content-with-padding img.full-width.img-responsive {
+  max-width: calc(~"100% + 30px");
+}
+
+img.float-left {
+  float: left;
+  margin: 0 20px 20px -15px;
+}
+img.float-right {
+  float: right;
+  margin: 0 -15px 20px 20px;
+}
+
+p.img-width {
+  line-height: 30px;
+  margin-top: -30px;
+}
+
+/* wireframe specific */
+.jumbotron {
+  .container & {
+    border-radius: 0;
+  }
+}
+
+.video {
+  text-align: center;
+  .glyphicon {
+    margin-top: 140px;
+    font-size: 100px;
+  }
+}
+
+/* rotator */
+.carousel {
+  .carousel-control.left,
+  .carousel-control.right {
+    background-image: none;
+    z-index: 1000;
+
+    .glyphicon {
+      margin-top: -8px;
+    }
+    .glyphicon-chevron-left {
+      left: 20px;
+    }
+    .glyphicon-chevron-right {
+      right: 20px;
+    }
+  }
+
+  &#article-rotator {
+    .carousel-indicators {
+      left: 25px;
+      margin: 0;
+      bottom: 20px;
+      width: auto;
+      text-align: left;
+      z-index: 1001;
+    }
+    .item {
+      background-color: #eee;
+
+      .carousel-caption {
+        position: static;
+        padding: 0 40px 0 0;
+        text-shadow: none;
+        color: #333;
+        text-align: left;
+
+        .float-left {
+          margin-bottom: 0;
+          margin-left: 0px;
+        }
+        .carousel-copy {
+          float: left; 
+          width: calc(~"100% - 20px - 450px");
+        }
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
+        .btn {
+          margin-right: 7px;
+        }
+        a {
+          margin: 0 1px;
+        }
+      }
+
+    }
+  }
+}
+
+.challenges-home-v2,
+.challenges-home-v4,
+.challenges-home-v4a {
+  .carousel#article-rotator .item .carousel-caption {
+    .carousel-copy {
+      width: calc(~"100% - 20px - 320px");
+    }
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (max-width: @screen-sm-max) {
+  .challenges-home-v2 .carousel#article-rotator,
+  .carousel#article-rotator {
+    .carousel-indicators { left: 60px; }
+    .item .carousel-caption {
+      img.float-left { display: none; }
+      .carousel-copy { width: auto; padding: 0 20px 40px 60px; }
+    }
+  }
+}
+
+@media (max-width: @screen-xs-max) {
+  .challenges-home-v2 .carousel#article-rotator,
+  .carousel#article-rotator {
+    .carousel-control { display: none; }
+    .carousel-indicators { left: 20px; }
+    .item .carousel-caption {
+      .carousel-copy { padding: 0 0 40px 20px; }
+    }
+  }
+}
+
+/* instead of rotator in v3*/
+.articles {
+  hr {
+    clear: both;
+    border-top-color: #ccc;
+  }
+  .btn {
+    margin-right: 10px;
+  }
+  img {
+    @media (max-width: @screen-xs-max) { display: none; }
+  }
+}
+
+/* end of rotator */
+
+.item {
+  .links {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) { display: block; margin-top: 5px; }
+    @media (max-width: @screen-xs-max) { display: block; margin-top: 10px; }
+  }
+}
+.icon-list {
+  .item {
+    margin-bottom: 15px;
+    padding: 0 0 15px 75px;
+    border-bottom: 1px solid #aaa;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0px;
+    }
+
+    h5 { margin-top: 0; }
+
+    .icon {
+      float: left;
+      margin-left: -90px;
+      width: 75px;
+      height: 75px;
+      text-align: center;
+      font-size: 50px;
+      line-height: 75px;
+    }
+
+    .links { color: #666; }
+  }
+}
+@media (min-width: @screen-md-min) {
+  .challenges-home-v2 .icon-list {
+    .item {
+      padding: 15px;
+      border-bottom: none;
+      border-right: 1px solid #aaa;
+      text-align: center;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      .icon {
+        display: block;
+        float: none;
+        margin: 0 auto 15px;
+      }
+    }
+  }
+}
+@media (max-width: @screen-sm-max) {
+  .challenges-home-v2 .icon-list {
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+/* share */
+.share {
+  font-size: 30px;
+
+  a {
+    float: left;
+    padding: 7px;
+    color: #fff;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:hover {
+      color: #428bca;
+    }
+  }
+}
+
+.challenges-home-v3 .share a {
+  color: #999;
+  &:hover {
+    color: #428bca;
+  }
+}
+/* end of share */
+
+/* full screen jumbotron */
+.jumbotron-container {
+  position: relative;
+  .jumbotron {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 0;
+  }
+}
+
+/* upcoming challenges */
+.upcoming-challenges {
+  .item {
+    display: none;
+  }
+  .item:nth-child(1),
+  .item:nth-child(2) {
+    display: block;
+  }
+}
+
+/* join */
+
+.non-auth-bck {
+  header {
+    .btn {
+      line-height: 20px;
+    }
+  }
+
+  .modal-title {
+    width: 510px;
+    text-transform: uppercase;
+    span.thin { font-weight: normal; }
+  }
+
+  #join-modal {
+    .step {
+      display: none;
+
+      &[data-step="1"] {
+        display: block;
+      }
+
+      h4 {
+        position: absolute;
+        top: -40px;
+        left: 20px;
+      }
+
+      hr {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      select {
+        font-size: 16px;
+        width: 150px;
+      }
+
+      .form-row {
+        padding-bottom: 10px;
+        min-height: 28px;
+
+        label {
+          display: inline-block;
+          width: 150px;
+        }
+        &.disabled label,
+        &.disabled h5 {
+          color: #aaa;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"] {
+          width: 162px;
+        }
+
+        .notice {
+          display: inline-block;
+          padding-left: 10px;
+          width: 200px;
+          color: #888;
+          .fa {
+            font-size: 20px;
+          }
+        }
+        .notice-success, .notice-fail, .notice-weak {
+          display: none;
+        }
+
+        .tooltip-inner {
+          min-width: 200px;
+        }
+      }
+
+      .class {
+        margin-bottom: 12px;
+        border-bottom: 1px solid #ddd;
+
+        label {
+          width: 90px;
+        }
+        .class-title {
+          input { width: 430px; }
+        }
+        .student-age,
+        .student-grade {
+          padding-left: 95px;
+          label { width: 135px; }
+        }
+        .number-of-students {
+          padding-left: 95px;
+          label { width: 135px; }
+          input { width: 80px; }
+        }
+        .your-student-grade {
+          label {
+            width: 100%;
+          }
+        }
+
+      }
+
+      .dropdown-menu {
+        label {
+          margin: 0;
+          padding: 3px 20px;
+          width: 100%;
+          input { margin-right: 3px; }
+        }
+      }
+
+      .select-state {
+        display: none;
+        margin-left: 15px;
+      }
+    }
+
+  }
+
+}
+
+

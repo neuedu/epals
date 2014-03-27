@@ -1,0 +1,17 @@
+{
+    "fields": [
+        {
+            "holding_comments": {
+                "field_name": "holding_comments",
+                "validation": [
+                    {
+                        "function": "field_required",
+                        "message": "holding_comments are required"
+                    }
+                ]
+            }
+        }
+    ],
+    "other_fields": [
+        ]
+}
