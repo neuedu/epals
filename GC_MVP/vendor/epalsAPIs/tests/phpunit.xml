@@ -1,8 +1,0 @@
-<phpunit bootstrap="bootstrap.php">
-<testsuites>
-  <testsuite name="Profile REST Test Suite">
-    <file>php/classes/RestApiProfileTest.php</file>
-    <file>php/classes/RestApiEventTest.php</file>
-  </testsuite>
-</testsuites>
-</phpunit>
