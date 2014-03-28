@@ -1,0 +1,23 @@
+label.error {
+  background:url("images/unchecked.gif") no-repeat 0px 0px;
+  //padding-left: 18px;
+  padding-bottom: 2px;
+  
+  color: #EA5200;
+  //margin-left: 10px;
+  width:auto !important;
+}
+
+//regist page
+
+.register_checkbox
+{
+    margin: 4px 0 0;
+    margin-top: 1px \9;
+    display: inline;
+
+}
+
+select#gender{
+    width:162px;
+}

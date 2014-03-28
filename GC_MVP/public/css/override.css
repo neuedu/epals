@@ -1,0 +1,408 @@
+/* global */
+h2 {
+  font-size: 22px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.content h1:first-child,
+.content h2:first-child {
+  margin-top: 0;
+}
+.content h1:last-child,
+.content h2:last-child {
+  margin-bottom: 0;
+}
+label {
+  font-weight: normal;
+}
+.small {
+  color: #999;
+}
+li.separate {
+  padding-top: 10px;
+}
+/* fold line */
+.fold-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  padding-right: 20px;
+  border-bottom: 2px dashed #e33;
+  height: 28px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: right;
+  color: #e33;
+}
+.fold-line.fold-at-768 {
+  top: 740px;
+}
+.fold-line.fold-at-768:after {
+  content: "Fold @768px";
+}
+/* content styles */
+.content {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.content-no-margin {
+  margin: 0;
+}
+.content-with-padding {
+  padding: 15px 15px;
+}
+/* show width styles */
+.show-width p.width .glyphicon {
+  font-size: 16px;
+  padding-right: 10px;
+}
+.show-width p.width .glyphicon:before {
+  position: relative;
+  top: 2px;
+}
+/* image styles */
+.content-with-padding img.full-width {
+  margin: 0 -15px;
+}
+.content-with-padding img.full-width.img-responsive {
+  max-width: calc(100% + 30px);
+}
+img.float-left {
+  float: left;
+  margin: 0 20px 20px -15px;
+}
+img.float-right {
+  float: right;
+  margin: 0 -15px 20px 20px;
+}
+p.img-width {
+  line-height: 30px;
+  margin-top: -30px;
+}
+/* wireframe specific */
+.container .jumbotron {
+  border-radius: 0;
+}
+.video {
+  text-align: center;
+}
+.video .glyphicon {
+  margin-top: 140px;
+  font-size: 100px;
+}
+/* rotator */
+.carousel .carousel-control.left,
+.carousel .carousel-control.right {
+  background-image: none;
+  z-index: 1000;
+}
+.carousel .carousel-control.left .glyphicon,
+.carousel .carousel-control.right .glyphicon {
+  margin-top: -8px;
+}
+.carousel .carousel-control.left .glyphicon-chevron-left,
+.carousel .carousel-control.right .glyphicon-chevron-left {
+  left: 20px;
+}
+.carousel .carousel-control.left .glyphicon-chevron-right,
+.carousel .carousel-control.right .glyphicon-chevron-right {
+  right: 20px;
+}
+.carousel#article-rotator .carousel-indicators {
+  left: 25px;
+  margin: 0;
+  bottom: 20px;
+  width: auto;
+  text-align: left;
+  z-index: 1001;
+}
+.carousel#article-rotator .item {
+  background-color: #eee;
+}
+.carousel#article-rotator .item .carousel-caption {
+  position: static;
+  padding: 0 40px 0 0;
+  text-shadow: none;
+  color: #333;
+  text-align: left;
+}
+.carousel#article-rotator .item .carousel-caption .float-left {
+  margin-bottom: 0;
+  margin-left: 0px;
+}
+.carousel#article-rotator .item .carousel-caption .carousel-copy {
+  float: left;
+  width: calc(100% - 20px - 450px);
+}
+.carousel#article-rotator .item .carousel-caption p {
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.carousel#article-rotator .item .carousel-caption .btn {
+  margin-right: 7px;
+}
+.carousel#article-rotator .item .carousel-caption a {
+  margin: 0 1px;
+}
+.challenges-home-v2 .carousel#article-rotator .item .carousel-caption .carousel-copy,
+.challenges-home-v4 .carousel#article-rotator .item .carousel-caption .carousel-copy,
+.challenges-home-v4a .carousel#article-rotator .item .carousel-caption .carousel-copy {
+  width: calc(100% - 20px - 320px);
+}
+.challenges-home-v2 .carousel#article-rotator .item .carousel-caption p,
+.challenges-home-v4 .carousel#article-rotator .item .carousel-caption p,
+.challenges-home-v4a .carousel#article-rotator .item .carousel-caption p {
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 991px) {
+  .challenges-home-v2 .carousel#article-rotator .carousel-indicators,
+  .carousel#article-rotator .carousel-indicators {
+    left: 60px;
+  }
+  .challenges-home-v2 .carousel#article-rotator .item .carousel-caption img.float-left,
+  .carousel#article-rotator .item .carousel-caption img.float-left {
+    display: none;
+  }
+  .challenges-home-v2 .carousel#article-rotator .item .carousel-caption .carousel-copy,
+  .carousel#article-rotator .item .carousel-caption .carousel-copy {
+    width: auto;
+    padding: 0 20px 40px 60px;
+  }
+}
+@media (max-width: 767px) {
+  .challenges-home-v2 .carousel#article-rotator .carousel-control,
+  .carousel#article-rotator .carousel-control {
+    display: none;
+  }
+  .challenges-home-v2 .carousel#article-rotator .carousel-indicators,
+  .carousel#article-rotator .carousel-indicators {
+    left: 20px;
+  }
+  .challenges-home-v2 .carousel#article-rotator .item .carousel-caption .carousel-copy,
+  .carousel#article-rotator .item .carousel-caption .carousel-copy {
+    padding: 0 0 40px 20px;
+  }
+}
+/* instead of rotator in v3*/
+.articles hr {
+  clear: both;
+  border-top-color: #ccc;
+}
+.articles .btn {
+  margin-right: 10px;
+}
+@media (max-width: 767px) {
+  .articles img {
+    display: none;
+  }
+}
+/* end of rotator */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .item .links {
+    display: block;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  .item .links {
+    display: block;
+    margin-top: 10px;
+  }
+}
+.icon-list .item {
+  margin-bottom: 15px;
+  padding: 0 0 15px 75px;
+  border-bottom: 1px solid #aaa;
+}
+.icon-list .item:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+.icon-list .item h5 {
+  margin-top: 0;
+}
+.icon-list .item .icon {
+  float: left;
+  margin-left: -90px;
+  width: 75px;
+  height: 75px;
+  text-align: center;
+  font-size: 50px;
+  line-height: 75px;
+}
+.icon-list .item .links {
+  color: #666;
+}
+@media (min-width: 992px) {
+  .challenges-home-v2 .icon-list .item {
+    padding: 15px;
+    border-bottom: none;
+    border-right: 1px solid #aaa;
+    text-align: center;
+  }
+  .challenges-home-v2 .icon-list .item:last-child {
+    border-right: none;
+  }
+  .challenges-home-v2 .icon-list .item .icon {
+    display: block;
+    float: none;
+    margin: 0 auto 15px;
+  }
+}
+@media (max-width: 991px) {
+  .challenges-home-v2 .icon-list .row {
+    margin: 0;
+  }
+}
+/* share */
+.share {
+  font-size: 30px;
+}
+.share a {
+  float: left;
+  padding: 7px;
+  color: #fff;
+}
+.share a:first-child {
+  padding-left: 0;
+}
+.share a:hover {
+  color: #428bca;
+}
+.challenges-home-v3 .share a {
+  color: #999;
+}
+.challenges-home-v3 .share a:hover {
+  color: #428bca;
+}
+/* end of share */
+/* full screen jumbotron */
+.jumbotron-container {
+  position: relative;
+}
+.jumbotron-container .jumbotron {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+  top: 0;
+}
+/* upcoming challenges */
+.upcoming-challenges .item {
+  display: none;
+}
+.upcoming-challenges .item:nth-child(1),
+.upcoming-challenges .item:nth-child(2) {
+  display: block;
+}
+/* join */
+.non-auth-bck header .btn {
+  line-height: 20px;
+}
+.non-auth-bck .modal-title {
+  width: 510px;
+  text-transform: uppercase;
+}
+.non-auth-bck .modal-title span.thin {
+  font-weight: normal;
+}
+.non-auth-bck #join-modal .step {
+  display: none;
+}
+.non-auth-bck #join-modal .step[data-step="1"] {
+  display: block;
+}
+.non-auth-bck #join-modal .step h4 {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+}
+.non-auth-bck #join-modal .step hr {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.non-auth-bck #join-modal .step select {
+  font-size: 16px;
+  //width: 150px;
+  width: 162px;
+}
+.non-auth-bck #join-modal .step .form-row {
+  padding-bottom: 10px;
+  min-height: 28px;
+}
+.non-auth-bck #join-modal .step .form-row label {
+  display: inline-block;
+  width: 150px;
+}
+.non-auth-bck #join-modal .step .form-row.disabled label,
+.non-auth-bck #join-modal .step .form-row.disabled h5 {
+  color: #aaa;
+}
+.non-auth-bck #join-modal .step .form-row input[type="text"],
+.non-auth-bck #join-modal .step .form-row input[type="password"],
+.non-auth-bck #join-modal .step .form-row input[type="email"],
+.non-auth-bck #join-modal .step .form-row input[type="number"],
+.non-auth-bck #join-modal .step .form-row input[type="date"] {
+  width: 162px;
+}
+.non-auth-bck #join-modal .step .form-row .notice {
+  display: inline-block;
+  padding-left: 10px;
+  width: 200px;
+  color: #888;
+}
+.non-auth-bck #join-modal .step .form-row .notice .fa {
+  font-size: 20px;
+}
+.non-auth-bck #join-modal .step .form-row .notice-success,
+.non-auth-bck #join-modal .step .form-row .notice-fail,
+.non-auth-bck #join-modal .step .form-row .notice-weak {
+  display: none;
+}
+.non-auth-bck #join-modal .step .form-row .tooltip-inner {
+  min-width: 200px;
+}
+.non-auth-bck #join-modal .step .class {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.non-auth-bck #join-modal .step .class label {
+  width: 90px;
+}
+.non-auth-bck #join-modal .step .class .class-title input {
+  width: 430px;
+}
+.non-auth-bck #join-modal .step .class .student-age,
+.non-auth-bck #join-modal .step .class .student-grade {
+  padding-left: 95px;
+}
+.non-auth-bck #join-modal .step .class .student-age label,
+.non-auth-bck #join-modal .step .class .student-grade label {
+  width: 135px;
+}
+.non-auth-bck #join-modal .step .class .number-of-students {
+  padding-left: 95px;
+}
+.non-auth-bck #join-modal .step .class .number-of-students label {
+  width: 135px;
+}
+.non-auth-bck #join-modal .step .class .number-of-students input {
+  width: 80px;
+}
+.non-auth-bck #join-modal .step .class .your-student-grade label {
+  width: 100%;
+}
+.non-auth-bck #join-modal .step .dropdown-menu label {
+  margin: 0;
+  padding: 3px 20px;
+  width: 100%;
+}
+.non-auth-bck #join-modal .step .dropdown-menu label input {
+  margin-right: 3px;
+}
+.non-auth-bck #join-modal .step .select-state {
+  display: none;
+  margin-left: 15px;
+}

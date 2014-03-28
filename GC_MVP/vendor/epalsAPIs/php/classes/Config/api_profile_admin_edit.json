@@ -1,0 +1,46 @@
+{
+    "fields": [
+        {
+            "user_id": {
+                "field_name": "user_id",
+                "validation": [
+                    {
+                        "function": "field_numeric",
+                        "message": "user_id must be a number"
+                    },
+                    {
+                        "function": "field_greater_than_0",
+                        "message": "user_id must be greater than 0"
+                    },
+                    {
+                        "function": "field_user_id_exists",
+                        "message": "user_id does not exist in mysql"
+                    }
+                ]
+            }
+        }
+    ],
+    "other_fields": [
+        "email",
+        "teacher_name",
+        "country",
+        "region",
+        "school_name",
+        "street1",
+        "street2",
+        "city",
+        "skype_name",
+        "state",
+        "name",
+        "zip",
+        "phone",
+        "description",
+        "skype_visibility",
+        "age_range",
+        "num_students",
+        "languages",
+        "subjects",
+        "collaboration",
+        "visibility"
+    ]
+}

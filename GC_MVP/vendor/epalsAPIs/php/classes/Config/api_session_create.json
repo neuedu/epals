@@ -1,0 +1,28 @@
+{
+    "fields": [
+        {
+            "username": {
+                "field_name": "username",
+                "validation": [
+                    {
+                        "function": "field_required",
+                        "message": "username is required"
+                    }
+                ]
+            }
+        },
+        {
+            "password": {
+                "field_name": "password",
+                "validation": [
+                    {
+                        "function": "field_required",
+                        "message": "password is required"
+                    }
+                ]
+            }
+        },
+    ],
+    "other_fields": [
+    ]
+}

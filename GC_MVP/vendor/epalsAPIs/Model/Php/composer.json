@@ -1,0 +1,13 @@
+{
+    "repositories": [
+    {
+        "type": "composer",
+        "url": "https://packages.zendframework.com/"
+    }
+    ],
+    "require": {
+        "elasticsearch/elasticsearch": "~0.4",
+        "zendframework/zend-permissions-acl": "2.0.*",
+        "zendframework/zend-http": "2.0.*"
+    }
+}

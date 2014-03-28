@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Any Page</title>
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/jqui-wf/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <link href="../css/override.css" rel="stylesheet">
+
+  </head>
+
+  <body class="non-auth-bck">
+    <!-- <div class="fold-line fold-at-768"></div> -->
+<?php  echo $_SERVER['SERVER_NAME']?>
+    <div class="container">
+
+      <header class="row">
+        <div class="col-md-12">
+          <div class="content content-with-padding content-no-margin" style="background: #6d6e71; height: 100px;">
+            <h2>Header / Nav TBD</h2>
+              <div class="pull-right">
+
+                <button type="button" class="btn btn-primary btn-join" data-toggle="modal" data-target="#join-modal">
+                  Join ePals Global Community
+                </button>
+
+                <!-- complete you account button -->
+                <button type="button" class="btn btn-success btn-complete" data-toggle="modal" data-target="#join-modal" style="display: none;">
+                  <span style="font-size: 20px; line-height: 10px; position: relative; top: 2px;">84%</span>
+                  | Complete your Account
+                </button>
+
+                <!-- once the account is created this one is visible instead of the join button -->
+                <a href="dashboard.html" class="btn btn-default btn-user" style="display: none;">
+                  Hi <span class="username">{First Name}</span> | Your Dashboard
+                </a>
+
+              </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="row">
+
+        <!-- main col -->
+        <div class="col-md-12">
+
+          <!-- hero -->
+          <div class="col-md-12" style="height:1000px; background:#b9b9b9;">
+            <br>
+
+            <div class="alert alert-info">
+              To see the underage student flow, pick any date in this year as Birthday in the second step of the student flow.
+            </div>
+
+            <div class="alert alert-info">
+              If you select any of the "Open Dashboard" buttons (none of them are visible at page load) you will be taken to the Dashboard page.<br />
+              You'll have to hit the back button to return to this page.
+            </div>
+
+            <div class="alert alert-info">
+              Links to individual steps:
+              <ul>
+                <li class="separate">
+                    <a href="http://localhost/provisioning/index.phtml?role=teacher&step=1">Teacher 1</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=teacher&step=2">Teacher 2</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=teacher&step=3">Teacher 3</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=teacher&step=4">Teacher 4</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=teacher&step=5">Teacher 5</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=teacher&step=6">Teacher 6</a></li>
+
+                <li class="separate">
+                    <a href="http://localhost/provisioning/index.phtml?role=hs-teacher&step=1">Home-School Teacher 1</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=hs-teacher&step=2">Home-School Teacher 2</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=hs-teacher&step=3">Home-School Teacher 3</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=hs-teacher&step=4">Home-School Teacher 4</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=hs-teacher&step=5">Home-School Teacher 5</a></li>
+
+                <li class="separate">
+                    <a href="http://localhost/provisioning/index.phtml?role=student&step=1">Student 1</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=student&step=2">Student 2</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=student&step=3">Student 3</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=student&step=4">Student 4</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=student&step=5">Student 5</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=student&step=6">Student 6</a></li>
+
+                <li class="separate">
+                    <a href="http://localhost/provisioning/index.phtml?role=ua-student&step=1">Underage Student 1</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=ua-student&step=2">Underage Student 2</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=ua-student&step=3">Underage Student 3</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=ua-student&step=4">Underage Student 4</a></li>
+
+                <li class="separate">
+                    <a href="http://localhost/provisioning/index.phtml?role=parent&step=1">Parent or Guardian 1</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=parent&step=2">Parent or Guardian 2</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=parent&step=3">Parent or Guardian 3</a></li>
+                <li><a href="http://localhost/provisioning/index.phtml?role=parent&step=4">Parent or Guardian 4</a></li>
+              </ul>
+            </div>
+
+          </div>
+          <!-- /hero -->
+
+        </div>
+
+      </div>
+
+      <footer class="row">
+
+        <div class="col-md-12">
+          <div class="content content-with-padding content-no-margin" style="background: #6d6e71;">
+            <h2>Footer</h2>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+    <!-- join modal -->
+    <form action="http://localhost/provisioning" method="post">
+    <div class="modal fade" id="join-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+          
+        <div class="modal-content">
+
+          <div class="modal-header" style="min-height: 55px;">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+
+          <div class="modal-body">
+
+            <!-- step 1 -->
+            <div class="step step-one" data-step="1" data-role="all">
+              <h4 class="modal-title">ARE YOU A...</h4>
+
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="teacher" checked>
+                  <strong>TEACHER</strong> <p>Lorem ipsum short description if applicable</p>
+                </label>
+              </div>
+              <hr style="margin:3px 0px;">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="hs-teacher">
+                  <strong>HOME-SCHOOL TEACHER</strong> <p>Lorem ipsum short description or instruction probably needed for this role</p>
+                </label>
+              </div>
+              <hr style="margin:3px 0px;">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="student">
+                  <strong>STUDENT</strong> <p>Lorem ipsum short description if applicable</p>
+                </label>
+                </label>
+              </div>
+              <hr style="margin:3px 0px;">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="parent">
+                  <strong>PARENT / GUARDIAN</strong> <p>Lorem ipsum again short description if applicable</p>
+                </label>
+              </div>
+              <hr style="margin:3px 0px;">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="mentor">
+                  <strong>Mentor</strong> <p>Lorem ipsum short description if applicable</p>
+                </label>
+              </div>
+              <hr style="margin:3px 0px;">
+              <div class="radio">
+                <label>
+                  <input type="radio" name="role" value="other">
+                  <strong>OTHER</strong>
+                </label>
+                <select name="other" id="other" style="margin-left: 20px;">
+                  <option value="please-select">Please select</option>
+                  <option value="option-2">Option 1</option>
+                  <option value="option-1">Option 2</option>
+                </select>
+              </div>
+            </div>
+            <!-- /step 1 -->
+
+          <!-- teacher -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="teacher">
+              <h4 class="modal-title">Welcome <span class="name">Teacher</span>, <span class="thin">tell us about you</span></h4>
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum.</p>
+              <hr>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="tfirstname" value="" id="firstname">
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="tlastname" value="" id="lastname">
+              </div>              
+
+              <div class="form-row">
+                <label for="name">Gender</label>
+                <select name="tgender" id="gender">
+                  <option value="">Please select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>              
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="temail" value="" id="email">
+              </div>
+
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" name="tusername" value="" id="username" class="username" class="username">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  Username already exists.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="tpassword" value="" id="password">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-weak">
+                  <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                  Weak password
+                  <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="A strong password has numbers, upper case letters, and special characters."></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  8 characters at least
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="tbirthday" value="" id="birthday">
+              </div>
+
+              <div class="form-row">
+                <label for="title" class="small">Your Title</label>
+                <input type="text" name="ttitle" value="" id="title">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="tcountry">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="tstate" class="select-state"> 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <img src="images/robot.png">
+              </div>
+
+            </div>
+            <!-- /step 2 -->
+
+            <!-- step 3 -->
+            <div class="step" data-step="3" data-role="teacher" data-account-created="main">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us about your school</span></h4>
+
+              <!-- <div class="alert alert-success alert-main-account">
+                Your account is created!
+              </div> -->
+
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen.</p>
+              <hr>
+
+              <div class="form-row">
+                <label for="school_code">School Code</label>
+                <input type="text" name="tschool_code" value="" id="school_code">
+                <span style="font-style: italic; margin-left: 10px; color: #999;">Optional</span>
+              </div>
+
+              <div class="form-row">
+                <label for="school_name">School Name</label>
+                <input type="text" name="tschool_name" value="" id="school_name" style="width: 350px;">
+              </div>
+
+              <div class="form-row">
+                <label for="school_address">Address</label>
+                <input type="text" name="tschool_address" value="" id="school_address" style="width: 350px;">
+              </div>
+
+              <div class="form-row">
+                <label for="city">City</label>
+                <input type="text" name="tcity" value="" id="city" style="width: 250px;">
+              </div>
+
+              <div class="form-row">
+                <label for="state">State</label>
+                <input type="text" name="tstate1" value="" id="state">
+
+                <label for="school_zip" style="width: 30px; margin-left: 30px;">ZIP</label>
+                <input type="text" name="tschool_zip" value="" id="school_zip" style="width: 120px;">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="tcountry1" id="country">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+              </div>
+
+              <hr>
+              <div class="form-row">
+                <h5>School Type<span style="font-weight: normal; margin-left: 10px; color: #999;">(check all that apply)</span></h5>
+                <div id="school_type_div" style="padding-left: 30px;">
+                  <label style="width: 120px;" for="public"><input type="checkbox" name="public" id="public"> Public</label>
+                  <label style="width: 120px;" for="charter"><input type="checkbox" name="charter" id="charter"> Charter</label>
+                  <label style="width: 120px;" for="faith-based"><input type="checkbox" name="faith-based" id="faith-based"> Faith-based</label>
+                  <label style="width: 120px;" for="other-type"><input type="checkbox" name="other-type" id="other-type"> Other</label>
+                  <label style="width: 120px;" for="private"><input type="checkbox" name="private" id="private"> Private</label>
+                  <label style="width: 120px;" for="home"><input type="checkbox" name="home" id="home"> Home</label>
+                  <label style="width: 120px;" for="international"><input type="checkbox" name="international" id="international"> International</label>
+                </div>
+              </div>
+
+              <hr>
+              <div class="form-row">
+                <label for="school-safe" style="width: auto;"><input type="checkbox" name="school-safe" id="school-safe"> Include</label>
+                <select name="school-safe-number" id="school-safe-number" style="width: 60px; margin-right: 6px; margin-left: 6px;">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30" selected="selected">30</option>
+                  <option value="40">40</option>
+                  <option value="50">50</option>
+                  <option value="60">60</option>
+                  <option value="70">70</option>
+                  <option value="80">80</option>
+                  <option value="90">90</option>
+                  <option value="100">100</option>
+                </select>
+                SchoolSafe&reg; Accounts for My Students.<br />
+                <a href="#">What is SchoolSafe&reg;?</a>
+              </div>
+            </div>
+            <!-- /step 3 -->
+
+            <!-- step 4 add class page -->
+            <div class="step" data-step="4" data-role="teacher">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us what classes you teach</span></h4>
+              
+              <!-- 该div 就是每次点击add后通过上级父div ：first选择到的,对该div进行克隆-->
+              <!-- 暂对该div增加class dynticSub:滑动增加科目，以便向下便利取的科目值-->
+              <div class="class clearfix dynticSub">
+                  
+                <div class="form-row class-title">
+                  <label for="class_title">Subject</label>
+                  <input type="text" name="tclass_subject" value="" id="class_subject">
+                </div>
+
+                <div class="form-row student-grade">
+                  <label for="student-grade">Grade</label>
+                  <div class="btn-group your-student-grade">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Check all that apply <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><label for="Pre-K"><input type="checkbox" name="Pre-K" id="Pre-K">Pre-K</label></li>
+                      <li><label for="Kindergarten"><input type="checkbox" name="Kindergarten" id="Kindergarten">Kindergarten</label></li>
+                      <li><label for="First"><input type="checkbox" name="First" id="First">First</label></li>
+                      <li><label for="Second"><input type="checkbox" name="Second" id="Second">Second</label></li>
+                      <li><label for="Third"><input type="checkbox" name="Third" id="Third">Third</label></li>
+                      <li><label for="Fourth"><input type="checkbox" name="Fourth" id="Fourth">Fourth</label></li>
+                      <li><label for="Fifth"><input type="checkbox" name="Fifth" id="Fifth">Fifth</label></li>
+                      <li><label for="Sixth"><input type="checkbox" name="Sixth" id="Sixth">Sixth</label></li>
+                      <li><label for="Seventh"><input type="checkbox" name="Seventh" id="Seventh">Seventh</label></li>
+                      <li><label for="Eighth"><input type="checkbox" name="Eighth" id="Eighth">Eighth</label></li>
+                      <li><label for="Freshman"><input type="checkbox" name="Freshman" id="Freshman">Freshman</label></li>
+                      <li><label for="Sophomore"><input type="checkbox" name="Sophomore" id="Sophomore">Sophomore</label></li>
+                      <li><label for="Junior"><input type="checkbox" name="Junior" id="Junior">Junior</label></li>
+                      <li><label for="Senior"><input type="checkbox" name="Senior" id="Senior">Senior</label></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="form-row student-age">
+                  <label for="age">Student Age</label>
+                  <div class="btn-group school-type">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      Check all that apply <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><label for="sa-4"><input type="checkbox" name="sa-4" id="sa-4">4</label></li>
+                      <li><label for="sa-5"><input type="checkbox" name="sa-5" id="sa-5">5</label></li>
+                      <li><label for="sa-6"><input type="checkbox" name="sa-6" id="sa-6">6</label></li>
+                      <li><label for="sa-7"><input type="checkbox" name="sa-7" id="sa-7">7</label></li>
+                      <li><label for="sa-8"><input type="checkbox" name="sa-8" id="sa-8">8</label></li>
+                      <li><label for="sa-9"><input type="checkbox" name="sa-9" id="sa-9">9</label></li>
+                      <li><label for="sa-10"><input type="checkbox" name="sa-10" id="sa-10">10</label></li>
+                      <li><label for="sa-11"><input type="checkbox" name="sa-11" id="sa-11">11</label></li>
+                      <li><label for="sa-12"><input type="checkbox" name="sa-12" id="sa-12">12</label></li>
+                      <li><label for="sa-13"><input type="checkbox" name="sa-13" id="sa-13">13</label></li>
+                      <li><label for="sa-14"><input type="checkbox" name="sa-14" id="sa-14">14</label></li>
+                      <li><label for="sa-15"><input type="checkbox" name="sa-15" id="sa-15">15</label></li>
+                      <li><label for="sa-16"><input type="checkbox" name="sa-16" id="sa-16">16</label></li>
+                      <li><label for="sa-17"><input type="checkbox" name="sa-17" id="sa-17">17</label></li>
+                      <li><label for="sa-18+"><input type="checkbox" name="sa-18+" id="sa-18+">18+</label></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="form-row number-of-students">
+                  <label for="number_of_students">Number of Students</label>
+                  <input type="number" name="tnumber_of_students" value="" id="number_of_students">
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-default add-class"><i class="fa fa-plus" style="margin-right: 5px"></i> Add New Class</button>
+
+              <hr>
+
+              <div class="form-row">
+                <h5>Languages spoken by the students<span style="font-weight: normal; margin-left: 10px; color: #999;">(check all that apply)</span></h5>
+                <div style="padding-left: 30px;" id="students_language_div">
+
+                  <label style="width: 120px;" for="l-english" style="display: block"><input type="checkbox" name="l-english" id="l-english"> English</label>
+                  <label style="width: 120px;" for="l-chinese" style="display: block"><input type="checkbox" name="l-chinese" id="l-chinese"> Chinese</label>
+                  <label style="width: 120px;" for="l-german" style="display: block"><input type="checkbox" name="l-german" id="l-german"> German</label><br />
+                  <label style="width: 120px;" for="l-spanish" style="display: block"><input type="checkbox" name="l-spanish" id="l-spanish"> Spanish</label>
+                  <label style="width: 120px;" for="l-french" style="display: block"><input type="checkbox" name="l-french" id="l-french"> French</label>
+                  <label style="width: 60px;" for="l-other"><input type="checkbox" name="l-other" id="l-other"> Other</label>
+                  <input type="text" name="l-other-i" value="" id="l-other-i">
+                </div>
+              </div>
+
+            </div>
+            <!-- /step 4 -->
+
+            <!-- step 5 -->
+            <div class="step" data-step="5" data-role="teacher" data-last-step="true">
+              <h4 class="modal-title">OPTIONAL</h4>
+
+              <div class="form-row">
+                <label for="more-about-you" style="width: 165px;">More about you</label><br />
+                <textarea name="more-about-you" id="more-about-you" rows="3" cols="40" style="width: 450px;"></textarea>
+              </div>
+
+              <div class="form-row">
+                <label for="years-of-xp" style="width: 165px;">Years of experience</label>
+                <select name="years-of-xp" id="years-of-xp" style="width: 50px;">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="2">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="degree" style="width: 165px;">Highest degree earned</label>
+                <select name="tdegree" id="degree">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="match" style="width: 165px;">Availability for Matching</label>
+                <select name="tmatch" id="match">
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+              </div>
+
+            </div>
+            <!-- /step 5 -->
+
+            <!-- step 6 -->
+            <div class="step" data-step="6" data-role="teacher">
+              <h4 class="modal-title">THANK YOU</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div>
+            <!-- /step 6 -->
+
+          <!-- /teacher -->
+
+          <!-- home-school teacher -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="hs-teacher">
+              <h4 class="modal-title">Welcome <span class="name">Teacher</span>, <span class="thin">tell us about you</span></h4>
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum.</p>
+              <hr>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="hfirstname" value="" id="firstname">
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="hlastname" value="" id="lastname">
+              </div>              
+
+              <div class="form-row">
+                <label for="name">Gender</label>
+                <select name="hgender" id="gender">
+                  <option value="">Please select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="hemail" value="" id="email">
+              </div>
+
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" name="husername" value="" id="username" class="username">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  Username already exists.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="hpassword" value="" id="password">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-weak">
+                  <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                  Weak password
+                  <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="A strong password has numbers, upper case letters, and special characters."></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  8 characters at least
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="hbirthday" value="" id="birthday">
+              </div>
+
+              <div class="form-row">
+                <label for="title" class="small">Your Title</label>
+                <input type="text" name="htitle" value="" id="title">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="hcountry" id="country">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="hstate" class="select-state"> 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <img src="images/robot.png">
+              </div>
+
+
+            </div>
+            <!-- /step 2 -->
+
+            <!-- step 3 -->
+            <div class="step" data-step="3" data-role="hs-teacher" data-account-created="main">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us about your teaching environment</span></h4>
+
+              <!-- <div class="alert alert-success alert-main-account">
+                Your account is created!
+              </div> -->
+
+              <div class="form-row">
+                <label for="name_your_teaching_environment" style="width: auto; display: block"><h5>Choose Your Teaching Environment</h5></label>
+                <select name="teaching-environment" id="teaching-environment">
+                  <option value="">Please select</option>
+                  <option value="open">Open</option>
+                  <option value="closed">Closed</option>
+                </select>
+              </div>
+
+              <hr>
+
+              <h5>Mailing Address</h5>
+              <p>Lorem ipsum line of text explaining them what this is and why we need mailing address sit dolor amet.</p>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="htfirstname" value="" id="mfirstname">
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="htlastname" value="" id="mlastname">
+              </div> 
+
+              <div class="form-row">
+                <label for="address_line_1">Address Line 1</label>
+                <input type="text" name="haddress_line_1" value="" id="address_line_1">
+              </div>
+
+              <div class="form-row">
+                <label for="address_line_2">Address Line 2</label>
+                <input type="text" name="haddress_line_2" value="" id="address_line_2">
+              </div>
+
+              <div class="form-row">
+                <label for="city">City</label>
+                <input type="text" name="hcity" value="" id="city">
+              </div>
+
+              <div class="form-row">
+                <label for="state">State/Province/Region</label>
+                <input type="text" name="htstate" value="" id="state">
+              </div>
+
+              <div class="form-row">
+                <label for="zip">ZIP</label>
+                <input type="text" name="htzip" value="" id="zip">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="htcountry" id="mcountry">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="htstate1" class="select-state"> 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+
+            </div>
+            <!-- /step 3 -->
+
+            <!-- step 4 -->
+            <div class="step" data-step="4" data-role="hs-teacher" data-last-step="true">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us what you teach</span></h4>
+
+              <div class="class clearfix dynticSub1">
+                <div class="form-row class-title">
+                  <label for="class_title">Class Title</label>
+                  <input type="text" name="hclass_title" value="" id="class_title">
+                </div>
+
+                <div class="form-row student-age">
+                  <label for="age">Student Age</label>
+                  <select name="hstudent-age" id="student-age">
+                    <option value="">Please select</option>
+                    <option value="5">Younger than 6</option>
+                    <option value="6">6 years old</option>
+                    <option value="7">7 years old</option>
+                    <option value="8">8 years old</option>
+                    <option value="9">9 years old</option>
+                    <option value="10">10 years old</option>
+                    <option value="11">11 years old</option>
+                    <option value="12">12 years old</option>
+                    <option value="13">13 years old</option>
+                    <option value="14">14 years old</option>
+                    <option value="15">15 years old</option>
+                    <option value="16">16 years old</option>
+                    <option value="17">17 years old</option>
+                    <option value="18">18 years old</option>
+                    <option value="19">Older then 18</option>
+                  </select>
+                </div>
+
+                <div class="form-row number-of-students">
+                  <label for="number_of_students">Number of Students</label>
+                  <input type="text" name="hnumber_of_students" value="" id="hsnumber_of_students">
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-default add-class"><i class="fa fa-plus" style="margin-right: 5px"></i> Add New Class</button>
+
+
+            </div>
+            <!-- /step 4 -->
+
+            <!-- step 5 -->
+            <div class="step" data-step="5" data-role="hs-teacher">
+              <h4 class="modal-title">THANK YOU</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div>
+            <!-- /step 5 -->
+
+          <!-- /home-school teacher -->
+
+          <!-- student -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="student">
+              <h4 class="modal-title">Welcome <span class="name">Student</span>, <span class="thin">tell us about you</span></h4>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="sfirstname" value="" id="firstname">
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="slastname" value="" id="lastname">
+              </div> 
+
+              <div class="form-row">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="sbirthday" value="" id="student-birthday">
+              </div>
+
+            </div>
+            <!-- /step 2 -->
+
+            <!-- step 3 -->
+            <div class="step" data-step="3" data-role="student">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us about you</span> <span class="small">CONTINUED...</span></h4>
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="semail" value="" id="email">
+              </div>
+
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" name="susername" value="" id="username" class="username">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  Username already exists.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="spassword" value="" id="password">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-weak">
+                  <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                  Weak password
+                  <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="A strong password has numbers, upper case letters, and special characters."></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  8 characters at least
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="scountry" id="country">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="sstate" class="select-state" > 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <img src="images/robot.png">
+              </div>
+
+            </div>
+            <!-- /step 3 -->
+
+            <!-- step 4 -->
+            <div class="step" data-step="4" data-role="student" data-account-created="main">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us about your school</span></h4>
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit.</p>
+              <hr>
+
+              <!-- <div class="alert alert-success alert-main-account">
+                Your account is created!
+              </div> -->
+
+              <div class="form-row">
+                <label for="school_name">School Name</label>
+                <input type="text" name="sschool_name" value="" id="school_name" style="width: 350px;">
+              </div>
+
+              <div class="form-row">
+                <label for="school_address">Address</label>
+                <input type="text" name="sschool_address" value="" id="school_address" style="width: 350px;">
+              </div>
+
+              <div class="form-row">
+                <label for="city">City</label>
+                <input type="text" name="scity" value="" id="city" style="width: 250px;">
+              </div>
+
+              <div class="form-row">
+                <label for="state">State</label>
+                <input type="text" name="sstate1" value="" id="state">
+
+                <label for="school_zip" style="width: 30px; margin-left: 30px;">ZIP</label>
+                <input type="text" name="sschool_zip" value="" id="school_zip" style="width: 120px;">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="scountry1" id="country">
+                  <option value="">Please select</option>
+                  <option value="United States" selected="selected">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+              </div>
+
+              <div class="form-row grade-other" style="display: none;">
+                <label for="grade_other">Grade</label>
+                <input type="text" name="sgrade_other" value="" id="grade_other">
+              </div>
+
+              <div class="form-row grade-us">
+                <label for="your_grade">Your Grade</label>
+                <select name="syour-grade" id="your-grade">
+                  <option value="">Please select</option>
+                  <option value="Eighth">Eighth</option>
+                  <option value="Freshman">Freshman</option>
+                  <option value="Sophomore">Sophomore</option>
+                  <option value="Junior">Junior</option>
+                  <option value="Senior">Senior</option>
+                </select>
+              </div>
+
+              <hr>
+              <div class="form-row">
+                <h5>School Type<span style="font-weight: normal; margin-left: 10px; color: #999;">(check all that apply)</span></h5>
+                <div style="padding-left: 30px;" id='school_type_div'>
+                  <label style="width: 120px;" for="public"><input type="checkbox" name="public" id="public"> Public</label>
+                  <label style="width: 120px;" for="charter"><input type="checkbox" name="charter" id="charter"> Charter</label>
+                  <label style="width: 120px;" for="faith-based"><input type="checkbox" name="faith-based" id="faith-based"> Faith-based</label>
+                  <label style="width: 120px;" for="other-type"><input type="checkbox" name="other-type" id="other-type"> Other</label>
+                  <label style="width: 120px;" for="private"><input type="checkbox" name="private" id="private"> Private</label>
+                  <label style="width: 120px;" for="home"><input type="checkbox" name="home" id="home"> Home</label>
+                  <label style="width: 120px;" for="international"><input type="checkbox" name="international" id="international"> International</label>
+                </div>
+              </div>
+
+            </div>
+            <!-- /step 4 -->
+
+            <!-- step 5 -->
+            <div class="step" data-step="5" data-role="student" data-last-step="true">
+              <h4 class="modal-title">MORE ABOUT YOU</h4>
+
+
+              <div class="form-row">
+                <label for="student-grade">Favorite Subjects</label>
+                <div class="btn-group your-student-grade">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Check all that apply <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><label style="padding: 3px 15px;" for="science"><input type="checkbox" name="science" id="science"> Science</label></li>
+                    <li><label style="padding: 3px 15px;" for="math"><input type="checkbox" name="math" id="math"> Math</label></li>
+                    <li><label style="padding: 3px 15px;" for="reading"><input type="checkbox" name="reading" id="reading"> Reading</label></li>
+                    <li><label style="padding: 3px 15px;" for="writing"><input type="checkbox" name="writing" id="writing"> Writing</label></li>
+                    <li><label style="padding: 3px 15px;" for="social-studies"><input type="checkbox" name="social-studies" id="social-studies"> Social studies</label></li>
+                    <li><label style="padding: 3px 15px;" for="foreign-language"><input type="checkbox" name="foreign-language" id="foreign-language"> Foreign language</label></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="student-grade">Interests</label>
+                <div class="btn-group your-student-grade">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Check all that apply <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><label style="padding: 3px 15px;" for="sports"><input type="checkbox" name="sports" id="sports"> Sports</label></li>
+                    <li><label style="padding: 3px 15px;" for="gaming"><input type="checkbox" name="gaming" id="gaming"> Gaming</label></li>
+                    <li><label style="padding: 3px 15px;" for="art"><input type="checkbox" name="art" id="art"> Art</label></li>
+                    <li><label style="padding: 3px 15px;" for="music"><input type="checkbox" name="music" id="music"> Music</label></li>
+                    <li><label style="padding: 3px 15px;" for="instrument"><input type="checkbox" name="instrument" id="instrument"> Playing an instrument</label></li>
+                    <li><label style="padding: 3px 15px;" for="collecting"><input type="checkbox" name="collecting" id="collecting"> Collecting</label></li>
+                    <li><label style="padding: 3px 15px;" for="reading"><input type="checkbox" name="reading" id="reading"> Reading</label></li>
+                    <li><label style="padding: 3px 15px;" for="nature"><input type="checkbox" name="nature" id="nature"> Nature</label></li>
+                    <li><label style="padding: 3px 15px;" for="dance"><input type="checkbox" name="dance" id="dance"> Dance</label></li>
+                    <li><label style="padding: 3px 15px;" for="cooking"><input type="checkbox" name="cooking" id="cooking"> Cooking</label></li>
+                    <li><label style="padding: 3px 15px;" for="movies"><input type="checkbox" name="movies" id="movies"> TV/Movies</label></li>
+                    <li><label style="padding: 3px 15px;" for="other"><input type="checkbox" name="other" id="other"> Other</label></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="name">Gender</label>
+                <select name="sgender1" id="gender">
+                  <option value="">Please select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>              
+
+              <div class="form-row">
+                <h5>Languages spoken at home <span style="font-weight: normal; margin-left: 10px; color: #999;">(check all that apply)</span></h5>
+                <div style="padding-left: 30px;" id="students_language_div">
+                  <label style="width: 120px;" for="l-english" style="display: block"><input type="checkbox" name="l-english" id="l-english"> English</label>
+                  <label style="width: 120px;" for="l-chinese" style="display: block"><input type="checkbox" name="l-chinese" id="l-chinese"> Chinese</label>
+                  <label style="width: 120px;" for="l-german" style="display: block"><input type="checkbox" name="l-german" id="l-german"> German</label><br />
+                  <label style="width: 120px;" for="l-spanish" style="display: block"><input type="checkbox" name="l-spanish" id="l-spanish"> Spanish</label>
+                  <label style="width: 120px;" for="l-french" style="display: block"><input type="checkbox" name="l-french" id="l-french"> French</label>
+                  <label style="width: 60px;" for="l-other"><input type="checkbox" name="l-other" id="l-other"> Other</label>
+                  <input type="text" name="l-other-i" value="" id="l-other-i">
+                </div>
+              </div>
+
+            </div>
+            <!-- /step 5 -->
+
+            <!-- step 6 -->
+            <div class="step" data-step="6" data-role="student">
+              <h4 class="modal-title">THANK YOU</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div>
+            <!-- /step 6 -->
+
+            <!-- step 3 underage -->
+            <div class="step underage" data-step="13" data-role="student">
+              <h4 class="modal-title">PARENT/GUARDIAN APPROVAL REQUIRED</h4>
+
+              <p>You need your parent or guardian's approval to become an ePals member.</p>
+
+              <div class="form-row">
+                <label for="email" style="display:block; width: auto;">Your Parent or Guardian's Email address:</label>
+                <input type="email" name="uemail1" value="" id="uemail" style="width: 300px;">
+              </div>
+
+            </div>
+            <!-- /step 3 underage -->
+
+            <!-- step 4 underage -->
+            <div class="step email-confirmation" data-step="14" data-role="student">
+              <h4 class="modal-title">THANK YOU</h4>
+
+              <h5>An email has been sent to your parent or guardian at the address you provided.</h5>
+              <p>Please have your parent or guardian check their inbox and click on the link in the email from ePals Support.</p>
+              <h5>No Email?</h5>
+              <p>Don't forget to have your parents check their "spam", "junk" or "bulk mail" folders! If they still didn't get the email, please <a href="#">try registering again</a>, or contact <a href="#">ePals support</a>.</p>
+              <p>While you are waiting for an email from ePals, be sure to spend some time getting to know the ePals website. You don't need to be a member to enjoy many of the features.</p>
+
+            </div>
+            <!-- /step 4 underage -->
+
+          <!-- /student -->
+
+          <!-- parent -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="parent">
+              <h4 class="modal-title">Welcome <span class="name">Parent</span>, <span class="thin">tell us about you</span></h4>
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum.</p>
+              <hr>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="pfirstname" value="" id="firstname">
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="plastname" value="" id="lastname">
+              </div> 
+
+              <div class="form-row">
+                <label for="name">Gender</label>
+                <select name="pgender" id="gender">
+                  <option value="">Please select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>              
+
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="pemail" value="" id="email">
+              </div>
+
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" name="pusername" value="" id="username" class="username">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  Username already exists.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="ppassword" value="" id="password">
+
+                <div class="notice notice-success">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+                <div class="notice notice-weak">
+                  <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                  Weak password
+                  <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="A strong password has numbers, upper case letters, and special characters."></i>
+                </div>
+                <div class="notice notice-fail">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  8 characters at least
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="pbirthday" value="" id="birthday">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="pcountry">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="pstate" class="select-state"> 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <img src="images/robot.png">
+              </div>
+
+            </div>
+            <!-- /step 2 -->
+
+            <!-- step 3 -->
+            <div class="step" data-step="3" data-role="parent" data-account-created="main">
+              <h4 class="modal-title">Welcome <span class="name">{First Name}</span>, <span class="thin">tell us about your children</span></h4>
+
+              <div class="accordion dynticSub1">
+                <h5> </h5>
+                <div class="panel">
+                  <div class="form-row">
+                    <label for="student_first">Student First Name</label>
+                    <input type="text" name="pstudent_first" value="" id="student_first">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="student_last">Student Last Name</label>
+                    <input type="text" name="pstudent_last" value="" id="student_last">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="username">Username</label>
+                    <input type="text" name="pusername1" value="" id="student_username">
+
+                    <div class="notice notice-success">
+                      <i class="fa fa-check-circle-o" style="color: #080"></i>
+                    </div>
+                    <div class="notice notice-fail">
+                      <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                      Username already exists.
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="ppassword1" value="" id="student_password">
+
+                    <div class="notice notice-success">
+                      <i class="fa fa-check-circle-o" style="color: #080"></i>
+                    </div>
+                    <div class="notice notice-weak">
+                      <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                      Weak password
+                      <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="A strong password has numbers, upper case letters, and special characters."></i>
+                    </div>
+                    <div class="notice notice-fail">
+                      <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                      8 characters at least
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" name="pbirthday1" value="" id="student_birthday">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="school_name">School Name</label>
+                    <input type="text" name="pschool_name" value="" id="student_school_name" style="width: 350px;">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="school_address">Address</label>
+                    <input type="text" name="pschool_address" value="" id="student_school_address" style="width: 350px;">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="city">City</label>
+                    <input type="text" name="pcity" value="" id="student_city" style="width: 250px;">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="state">State</label>
+                    <input type="text" name="pstate1" value="" id="student_state">
+
+                    <label for="school_zip" style="width: 30px; margin-left: 30px;">ZIP</label>
+                    <input type="text" name="pschool_zip" value="" id="student_school_zip" style="width: 120px;">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="country">Country</label>
+                    <select name="pcountry1" id="student_country">
+                      <option value="">Please select</option>
+                      <option value="United States" selected="selected">United States</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Albania">Albania</option>
+                      <option value="etc">...</option>
+                    </select>
+                  </div>
+
+                  <div class="form-row grade-other" style="display: none;">
+                    <label for="grade_other">Grade</label>
+                    <input type="text" name="pgrade_other" value="" id="student_grade_other">
+                  </div>
+
+                  <div class="form-row grade-us">
+                    <label for="your_grade">Grade</label>
+                    <select name="pyour-grade" id="student_your-grade">
+                      <option value="">Please select</option>
+                      <option value="Eighth">Eighth</option>
+                      <option value="Freshman">Freshman</option>
+                      <option value="Sophomore">Sophomore</option>
+                      <option value="Junior">Junior</option>
+                      <option value="Senior">Senior</option>
+                    </select>
+                  </div>
+
+                  <hr>
+
+                  <div class="form-row">
+                    <label style="width: auto;">School Type<span style="font-weight: normal; margin-left: 10px; color: #999;">(check all that apply)</span></label>
+                    <div style="padding-left: 30px;">
+                      <label style="width: 120px;" for="public"><input type="checkbox" name="public" id="public"> Public</label>
+                      <label style="width: 120px;" for="charter"><input type="checkbox" name="charter" id="charter"> Charter</label>
+                      <label style="width: 120px;" for="faith-based"><input type="checkbox" name="faith-based" id="faith-based"> Faith-based</label>
+                      <label style="width: 120px;" for="other-type"><input type="checkbox" name="other-type" id="other-type"> Other</label>
+                      <label style="width: 120px;" for="private"><input type="checkbox" name="private" id="private"> Private</label>
+                      <label style="width: 120px;" for="home"><input type="checkbox" name="home" id="home"> Home</label>
+                      <label style="width: 120px;" for="international"><input type="checkbox" name="international" id="international"> International</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary add-a-student" style="margin-top: 20px;">Add a Child</button>
+
+            </div>
+            <!-- /step 3 -->
+
+            <!-- step 4 -->
+            <!-- <div class="step" data-step="4" data-role="parent" data-account-created="student" data-last-step="true">
+              <h4 class="modal-title">ADD ANOTHER STUDENT?</h4>
+
+              <p>Your students:</p>
+              <ul class="your-students"></ul>
+
+            </div> -->
+            <!-- /step 4 -->
+
+            <!-- step 5 -->
+            <div class="step" data-step="4" data-role="parent">
+              <h4 class="modal-title">THANK YOU</h4>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div>
+            <!-- /step 5 -->
+
+          <!-- /parent -->
+
+          <!-- other -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="mentor">
+              <h4 class="modal-title">MENTOR / STEP 2</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <!-- /step 2 -->
+
+          <!-- /other -->
+
+          <!-- other -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="other">
+              <h4 class="modal-title">OTHER / STEP 2</h4>
+              <p>The same step for all others. Do we need separate steps for each role you add to "others" drop down?</p>
+            </div>
+            <!-- /step 2 -->
+
+          <!-- /other -->
+
+          <!-- form-demo -->
+
+            <!-- step 2 -->
+            <div class="step" data-step="2" data-role="form-demo">
+              <h4 class="modal-title">Form Demo</h4>
+              <p>Lorem ipsum text here. Gratuitous octopus niacin, sodium glutimate. Quote meon an estimate et non interruptus stadium. Sic tempus fugit esperanto hiccup estrogen. Glorious baklava ex librus hup hey ad infinitum.</p>
+                <hr>
+                <h5>TELL US ABOUT YOU</h5>
+                <hr>
+
+              <div class="form-row">
+                <label for="name">First Name</label>
+                <input type="text" name="firstname" value="" id="firstname">
+
+                <div class="notice">
+                  <i class="fa fa-check-circle-o" style="color: #080"></i>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="name">Last Name</label>
+                <input type="text" name="lastname" value="" id="lastname">
+
+                <div class="notice">
+                  <i class="fa fa-question-circle" style="color: #888" data-toggle="tooltip" data-placement="right" title="Tooltip copy here"></i>
+                </div>
+              </div>              
+                
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" name="email" value="" id="email">
+
+                <div class="notice">
+                  ^ this has a tooltip
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="username">Username</label>
+                <input type="text" name="username" value="" id="username" class="username">
+
+                <div class="notice" style="color: #d33">
+                  <i class="fa fa-exclamation-circle" style="color: #d33"></i>
+                  Username already exists.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="password">Password</label>
+                <input type="password" name="password" value="" id="password">
+
+                <div class="notice">
+                  <i class="fa fa-exclamation-triangle" style="color: #fa0"></i>
+                  Lorem ipsum dolor.
+                </div>
+              </div>
+
+              <div class="form-row">
+                <label for="birthday">Birthday</label>
+                <input type="date" name="birthday" value="" id="birthday">
+              </div>
+
+              <div class="form-row">
+                <label for="title" class="small">Your Title</label>
+                <input type="text" name="title" value="" id="title">
+              </div>
+
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select name="country">
+                  <option value="" selected="selected">Please select</option>
+                  <option value="United States">United States</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="Afghanistan">Afghanistan</option>
+                  <option value="Albania">Albania</option>
+                  <option value="etc">...</option>
+                </select>
+                <select name="state" class="select-state"> 
+                  <option value="" selected="selected">Please select</option> 
+                  <option value="AL">Alabama</option> 
+                  <option value="AK">Alaska</option> 
+                  <option value="AZ">Arizona</option> 
+                  <option value="AR">Arkansas</option> 
+                  <option value="CA">California</option> 
+                  <option value="CO">Colorado</option> 
+                  <option value="CT">Connecticut</option> 
+                  <option value="DE">Delaware</option> 
+                  <option value="DC">District Of Columbia</option> 
+                  <option value="FL">Florida</option> 
+                  <option value="GA">Georgia</option> 
+                  <option value="HI">Hawaii</option> 
+                  <option value="ID">Idaho</option> 
+                  <option value="IL">Illinois</option> 
+                  <option value="IN">Indiana</option> 
+                  <option value="IA">Iowa</option> 
+                  <option value="KS">Kansas</option> 
+                  <option value="KY">Kentucky</option> 
+                  <option value="LA">Louisiana</option> 
+                  <option value="ME">Maine</option> 
+                  <option value="MD">Maryland</option> 
+                  <option value="MA">Massachusetts</option> 
+                  <option value="MI">Michigan</option> 
+                  <option value="MN">Minnesota</option> 
+                  <option value="MS">Mississippi</option> 
+                  <option value="MO">Missouri</option> 
+                  <option value="MT">Montana</option> 
+                  <option value="NE">Nebraska</option> 
+                  <option value="NV">Nevada</option> 
+                  <option value="NH">New Hampshire</option> 
+                  <option value="NJ">New Jersey</option> 
+                  <option value="NM">New Mexico</option> 
+                  <option value="NY">New York</option> 
+                  <option value="NC">North Carolina</option> 
+                  <option value="ND">North Dakota</option> 
+                  <option value="OH">Ohio</option> 
+                  <option value="OK">Oklahoma</option> 
+                  <option value="OR">Oregon</option> 
+                  <option value="PA">Pennsylvania</option> 
+                  <option value="RI">Rhode Island</option> 
+                  <option value="SC">South Carolina</option> 
+                  <option value="SD">South Dakota</option> 
+                  <option value="TN">Tennessee</option> 
+                  <option value="TX">Texas</option> 
+                  <option value="UT">Utah</option> 
+                  <option value="VT">Vermont</option> 
+                  <option value="VA">Virginia</option> 
+                  <option value="WA">Washington</option> 
+                  <option value="WV">West Virginia</option> 
+                  <option value="WI">Wisconsin</option> 
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <img src="images/robot.png">
+              </div>
+
+            </div>
+            <!-- /step 2 -->
+
+          <!-- /form-demo -->
+
+          </div>
+    
+          
+            
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default cancel" data-dismiss="modal" style="float: left;">Cancel</button>
+
+            <!-- replaces cancel once account is created -->
+            <button type="button" class="btn btn-default continue-browsing" data-dismiss="modal" style="float: left; display: none;">Close</button>
+
+            <!-- underage student step 4 -->
+            <button type="button" class="btn btn-primary ua-continue-browsing" data-dismiss="modal" style="display: none;">Close</button>
+
+            <button type="button" class="btn btn-default back" style="display: none;">Back</button>
+            <button type="button" id="teacherStep4Continue" class="btn btn-primary continue">Continue</button>
+
+            <!-- used in parent flow -->
+            <button type="button" class="btn btn-primary add-student" style="display: none; float: left;">Add Student</button>
+
+            <!-- replaces 'continue' on penultimate screen -->
+            <button type="button" class="btn btn-primary finish" style="display: none;">Finish</button>
+            
+
+            <!-- used in underage student flow -->
+            <button type="button" class="btn btn-primary send-email-to-parent" style="display: none;">Send Email</button>
+
+            <a href="dashboard.html" class="btn btn-primary dashboard" style="display: none;">Open Dashboard</a>
+          </div>
+
+        </div>
+      </div>        
+    </div>
+        
+    </form>
+    <!-- /join modal -->
+
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="../js/script.js"></script>
+
+    <!-- Start of StatCounter Code -->
+    <script type="text/javascript">
+    //<![CDATA[
+    var sc_project=9557069; 
+    var sc_invisible=1; 
+    var sc_security="fff0a9c1"; 
+    var scJsHost = (("https:" == document.location.protocol) ?
+    "https://secure." : "http://www.");
+    document.write("<sc"+"ript type='text/javascript' src='" +
+    scJsHost+
+    "statcounter.com/counter/counter_xhtml.js'></"+"script>");
+    //]]>
+    </script>
+    <noscript><div class="statcounter"><a title="hits counter"
+    href="http://statcounter.com/free-hit-counter/"
+    class="statcounter"><img class="statcounter"
+    src="http://c.statcounter.com/9557069/0/fff0a9c1/1/"
+    alt="hits counter" /></a></div></noscript>
+    <!-- End of StatCounter Code -->
+
+  </body>
+</html>
